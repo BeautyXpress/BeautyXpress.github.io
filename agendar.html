@@ -1,0 +1,85 @@
+<a href="#" id="agendarBtn">Agendar</a>
+        
+        <form id="formularioAgendar" style="display: none;">
+            <h3>Selecciona la fecha y hora de la cita:</h3>
+            <input type="datetime-local" id="fechaHoraInput" required min="2023-06-12T00:00">
+            <br><br>
+            <input type="submit" value="Agendar">
+        </form>
+    </div>
+
+    <script>
+        // Obtenemos una referencia al botón de "Agendar"
+        var agendarBtn = document.getElementById("agendarBtn");
+    
+        // Definimos la función que se ejecutará al hacer clic en el botón de "Agendar"
+        function mostrarFormularioAgendar() {
+            // Mostrar el formulario para agendar la cita
+            var formularioAgendar = document.getElementById("formularioAgendar");
+            formularioAgendar.style.display = "block";
+        }
+    
+        // Agregamos un evento de clic al botón de "Agendar"
+        agendarBtn.addEventListener("click", mostrarFormularioAgendar);
+        
+        // Procesar el formulario al enviarlo
+        var formulario = document.getElementById("formularioAgendar");
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que se recargue la página al enviar el formulario
+            
+            // Obtener los valores seleccionados por el usuario
+            var fechaHoraInput = document.getElementById("fechaHoraInput").value;
+            
+            // Aquí puedes agregar la lógica para procesar y almacenar la cita, como enviarla a un servidor o almacenarla en una base de datos
+            
+            // Mostrar un mensaje de éxito
+            alert("¡Su cita ha sido agendada para el día y hora seleccionados!");
+            
+            // Restablecer el formulario
+            formulario.reset();
+            
+            // Ocultar el formulario
+            formulario.style.display = "none";
+        });
+    </script>
+    <style>
+        /* Estilos generales del formulario */
+        #formularioAgendar {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+        
+        /* Estilos para los encabezados del formulario */
+        #formularioAgendar h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        /* Estilos para los campos de entrada */
+        #formularioAgendar input[type="datetime-local"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        /* Estilos para el botón de enviar */
+        #formularioAgendar input[type="submit"] {
+            background-color: #944397;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        /* Estilos para el botón de enviar al pasar el cursor sobre él */
+        #formularioAgendar input[type="submit"]:hover {
+            background-color: #944397;
+        }
+    </style> (CODIGO PARA LA AGENDA HTML Y CSS )

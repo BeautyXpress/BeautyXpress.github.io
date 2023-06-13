@@ -1,0 +1,42 @@
+.header {
+
+    width: 100%;
+    padding: 30px;
+    background: url(../images/header_bg.jpg);
+    position: fixed;
+    
+}
+.logo a {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 40px;
+}
+.Peluqueros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    m
+    
+    
+}
+.texto{
+    margin-top: 160px;
+    margin-right: 150px;
+}
+.texto a {
+    padding: 10px 15px;
+    background-color: #c79bf7;
+    border-radius: 15%;
+    color:white;
+    text-decoration: none;
+}
+.foto {
+    margin-left: 100px;
+}
+.foto img{
+    
+    width: 300px;
+    height: 400px;
+}

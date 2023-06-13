@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="header">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilog.css">
+    <title>Estetica</title>
+    
+</head>
+<header class="header">
+    <div class="logo">
+        <a href="index.html"><img src="images/logo2.png" alt="#" /></a>
+     </div>
+    </header>
+    
+<body class="Peluqueros">
+    
+    <div class="foto">
+        <h1>Profesional Disponible</h1>
+        <h3>Fernanda Gonzales</h3>
+        <img src="images/esteticista.jpeg" alt="">
+    </div>
+    <div class="texto">
+        <h3>Calificación ⭐⭐⭐⭐ </h3>
+        <h3>Ubicación: itagui</h3>
+        <h3>Precios desde: $ 29.000</h3>
+        <a href="#" id="agendarBtn">Agendar</a>
+        
+        <form id="formularioAgendar" style="display: none;">
+            <h3>Selecciona la fecha y hora de la cita:</h3>
+            <input type="datetime-local" id="fechaHoraInput" required min="2023-06-12T00:00">
+            <br><br>
+            <input type="submit" value="Agendar">
+        </form>
+    </div>
+
+    <script>
+        // Obtenemos una referencia al botón de "Agendar"
+        var agendarBtn = document.getElementById("agendarBtn");
+    
+        // Definimos la función que se ejecutará al hacer clic en el botón de "Agendar"
+        function mostrarFormularioAgendar() {
+            // Mostrar el formulario para agendar la cita
+            var formularioAgendar = document.getElementById("formularioAgendar");
+            formularioAgendar.style.display = "block";
+        }
+    
+        // Agregamos un evento de clic al botón de "Agendar"
+        agendarBtn.addEventListener("click", mostrarFormularioAgendar);
+        
+        // Procesar el formulario al enviarlo
+        var formulario = document.getElementById("formularioAgendar");
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que se recargue la página al enviar el formulario
+            
+            // Obtener los valores seleccionados por el usuario
+            var fechaHoraInput = document.getElementById("fechaHoraInput").value;
+            
+            // Aquí puedes agregar la lógica para procesar y almacenar la cita, como enviarla a un servidor o almacenarla en una base de datos
+            
+            // Mostrar un mensaje de éxito
+            alert("¡Su cita ha sido agendada para el día y hora seleccionados!");
+            
+            // Restablecer el formulario
+            formulario.reset();
+            
+            // Ocultar el formulario
+            formulario.style.display = "none";
+        });
+    </script>
+    
+
+    </div>
+</div>
+</body>
+</html>
